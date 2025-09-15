@@ -1,0 +1,43 @@
+@extends('frontend.layouts.app')
+
+@section('title')
+<title> Withdraw | {{ config('app.name') }}  </title>
+<meta name="csrf-token" content="{{csrf_token()}}">
+@endsection
+
+@section('content')    
+
+
+<section class="recharge-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="recharge-wrapper">
+                    <div class="recharge-payment-top" style="background-image: url('{{asset('public/assets/frontend/')}}/images/counter-bg.png');">
+                        <ul>
+                            <li>
+                                <span><img src="{{asset('public/assets/frontend/')}}/images/usdt.png" alt="usdt"></span>
+                                <a href="{{ route('usdt-withdraw') }}">
+                                    <h4>USDT Withdraw</h4>
+                                    <p>A Single transation minimum of {{$site_info->min_withdraw_usdt ?? 0}} Coins</p>
+                                </a>
+                            </li>
+                            <li>
+                                <span><img src="{{asset('public/assets/frontend/')}}/images/online-payment.png" alt="online payment"></span>
+                                <a href="{{ route('online-withdraw') }}">
+                                    <h4>Withdrawing to a bank card</h4>
+                                    <p>A minimum of {{$site_info->min_withdraw_online ?? 0}} Coins and a maximum of {{$site_info->max_withdraw_online ?? 0}} Coins</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+               
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+@stop
