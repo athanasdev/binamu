@@ -63,9 +63,9 @@ font-family: 'Poppins', sans-serif;
 =========================== */
 header {
     padding: 15px 0px;
-    background: linear-gradient(144.14deg, #08CB00 0%, #104410 100%);
+    /* background: linear-gradient(144.14deg, #580f40 -11.44%, #004bc3 123.42%); */
+    background-color: #08CB00;
     color: #FFF;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .header-wrapper{
@@ -232,9 +232,9 @@ header {
     padding: 2px;
     border: none;
     border-radius: 100%;
-    background-color: #08CB00;
+    background-color: yellow;
     text-indent: -9999px;
-    border: 2px solid #08CB00;
+    border: 2px solid #7b05f1;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
@@ -247,7 +247,7 @@ header {
 ================================== */
 .marquee-area{
     position: relative;
-    /* background-color: #FFD700; */
+    /* background-color: yellow; */
     padding: 15px 0px;
     background-color: #FFF;
     margin: 20px 0px;
@@ -281,7 +281,7 @@ header {
     text-align: center;
     color: #FFF;
     border: 1px solid #08CB00;
-    border-radius: 15px;
+    border-radius: 10px;
     padding:20px;
     cursor: pointer;
     transition: all .5s;
@@ -289,11 +289,11 @@ header {
     -moz-transition: all .5s;
     -ms-transition: all .5s;
     -o-transition: all .5s;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    box-shadow: rgba(149, 157, 165, 0.3) 0px 10px 30px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border: 2px solid transparent;
 }
 .icon-item a{
@@ -315,7 +315,7 @@ header {
 }
 .icon-item:hover{
 background-color:#08CB00;
-border: 2px solid #08CB00;
+border: 2px solid cyan;
 }
 /* START:: SCORE SECTION
 ============================= */
@@ -325,15 +325,15 @@ border: 2px solid #08CB00;
 .score-item{
     background-color: #08CB00;
     padding: 20px;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: rgba(149, 157, 165, 0.3) 0px 10px 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     cursor: pointer;
     border: 2px solid transparent;
     transition: all .5s;
@@ -344,7 +344,7 @@ border: 2px solid #08CB00;
 }
 .score-item:hover{
     background-color: #08CB00;
-    border: 2px solid #08CB00;
+    border: 2px solid cyan;
 
 }
 .score-item p{
@@ -362,7 +362,7 @@ font-weight: 600;
  width: 100%;
 }
 .inverse-score p{
-    color: #08CB00;
+    color: yellow;
 }
 .positive-score p{
     color: #05ff05;
@@ -374,11 +374,11 @@ font-weight: 600;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
     padding: 20px;
     color: #FFF;
     display: flex;
@@ -392,7 +392,7 @@ font-weight: 600;
     -o-transition: all .5s;
     margin-bottom: 30px;
     width: 100%;
-
+   
 }
 .sport-wrapper .image{
     margin-bottom: 20px;
@@ -415,7 +415,7 @@ font-weight: 600;
     margin-bottom: 7px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-    color: #FFF;
+    color: aqua;
 }
 .sport-wrapper .sport-left{
   width: 40%;
@@ -432,17 +432,17 @@ font-weight: 600;
 }
 .sport-wrapper .sport-vs p{
     font-weight: 600;
-    color: #FFF;
+    color: aqua;
 }
 .sport-wrapper .sport-vs h4{
     margin-top: 20px;
     font-size: 40px;
     font-weight: bold;
-    color: #FFF;
+    color: yellow;
 }
 .sport-wrapper:hover{
     background-color: #08CB00;
-    border: 2px solid #08CB00;
+    border: 2px solid cyan;
 }
 /* START:: PROFILE PAGE
 ====================================== */
@@ -500,7 +500,7 @@ font-weight: 600;
  right: 1%;
  padding-top: 12px;
  font-family: 'FontAwesome';
-color: #08CB00;
+color: black;
 }
 .profile-menu ul li a{
     color: black;
@@ -691,7 +691,7 @@ color: #08CB00;
     padding: 20px;
 }
 .reacharge-note h4{
-   color: #08CB00;
+   color: orangered;
 }
 .reacharge-note ol{
 
@@ -735,13 +735,12 @@ color: #08CB00;
     -moz-transition: all .5s ease-in-out;
     -ms-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
-    background-image: linear-gradient(to right, #08CB00, #104410, #08CB00, #08CB00);
+    background-image: linear-gradient(to right, #08CB00 #104410, ##08CB00, #08CB00);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    
 }
 .recharge-amount-wrapper .amount-btn-wrapper button:hover{
   background-position: 100% 0;
@@ -788,7 +787,7 @@ color: #08CB00;
     -moz-transition:  all .5s ease-in-out;
     -ms-transition:  all .5s ease-in-out;
     -o-transition:  all .5s ease-in-out;
-    background-image: linear-gradient(to right, #08CB00, #104410, #08CB00, #08CB00);
+    background-image: linear-gradient(to right, #08CB00 #104410, ##08CB00, #08CB00);
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -922,7 +921,7 @@ color: green;
  font-family: 'AdorshoLipi', sans-serif;
 }
 .payment-submit-wrapper h5{
-color: #08CB00;
+color: orangered;
  text-align: center;
  padding: 0px 100px;
  line-height: 28px;
@@ -940,7 +939,7 @@ color: #08CB00;
 }
 .team-board .team h3{
 font-size: 18px;
-color: #08CB00;
+color: yellow;
 }
 .team-list ul li {
     display: flex;
@@ -1199,7 +1198,7 @@ ul.sport-details-tab li button:hover {
 
 .sport-details-tab.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #08CB00;
+    /* background-color: #08CB00; */
     border: 1px solid #FFF;
 }
 .sport-details ul li{
@@ -1253,7 +1252,7 @@ ul.sport-details-tab li button:hover {
     font-weight: 500;
 }
 .modal-footer button{
-    background-image: linear-gradient(to right, #08CB00, #104410, #08CB00, #08CB00);
+    background-image: linear-gradient(to right, #08CB00 #104410, #08CB00, #08CB00);
 }
 .modal-footer button:hover{
     background-position: 100% 0;
@@ -1289,7 +1288,7 @@ footer{
     text-align: center;
 }
 .footer-item a{
-    color: #08CB00;
+    color: #100649;
 }
 
 .footer-item:hover p,
@@ -1326,7 +1325,7 @@ footer{
 }
 .withdraw-wrapper ul li p{
     font-size: 14px;
-    color: #08CB00;
+    color: orangered;
     line-height: 18px;
 }
 .withdraw-wrapper ul li input{
