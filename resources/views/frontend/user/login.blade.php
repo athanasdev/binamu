@@ -9,7 +9,7 @@
     <!-- start::registration form -->
     <section class="registration-area">
         <div class="bg-img">
-            <img src="{{asset('public/assets/frontend/')}}/images/reg-bg.jpg" alt="">
+            <img src="{{asset('assets/frontend/')}}/images/reg-bg.jpg" alt="">
             <div class="img-overlay"></div>
         </div>
 <div style="background: #0080ff;" 

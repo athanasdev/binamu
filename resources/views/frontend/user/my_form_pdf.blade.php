@@ -20,8 +20,8 @@
         rel="stylesheet">
 
     <!-- ALL CSS -->
-    <link rel="stylesheet" href="{{asset('public/assets/frontend/')}}/dist/css/all.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/frontend/')}}/dist/css/tailwind.css">
+    <link rel="stylesheet" href="{{asset('assets/frontend/')}}/dist/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('assets/frontend/')}}/dist/css/tailwind.css">
 </head>
 
 <body class="py-3 bg-white">
@@ -170,7 +170,7 @@
     </div>
 
     <!-- ALL JS -->
-    <script src="{{asset('public/assets/frontend/')}}/dist/js/jquery-3.5.1.min.js"></script>
+    <script src="{{asset('assets/frontend/')}}/dist/js/jquery-3.5.1.min.js"></script>
     <script>
         function printDiv() {
             var printContents = document.getElementById('pdf-container').innerHTML;

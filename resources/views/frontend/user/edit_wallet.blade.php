@@ -15,7 +15,7 @@
                 @include('frontend.layouts.flash-message')
 
                 
-                <div class="relative text-sm py-8 px-4 mt-10 w-full aspect-[2/1.3] rounded-xl text-gray-300" style="background-image: url({{asset('public/assets/frontend/')}}/dist/img/wallet-back.webp);">
+                <div class="relative text-sm py-8 px-4 mt-10 w-full aspect-[2/1.3] rounded-xl text-gray-300" style="background-image: url({{asset('assets/frontend/')}}/dist/img/wallet-back.webp);">
 
                     <div class="flex items-center justify-end gap-5">
 
@@ -63,7 +63,7 @@
                     </form>
 
 
-                    <!-- <div class="chip rounded-lg overflow-hidden absolute bottom-6 right-6"><img src="{{asset('public/assets/frontend/')}}/dist/img/chip.png" alt="" class="w-[70px]"></div> -->
+                    <!-- <div class="chip rounded-lg overflow-hidden absolute bottom-6 right-6"><img src="{{asset('assets/frontend/')}}/dist/img/chip.png" alt="" class="w-[70px]"></div> -->
 
                 </div>
             </div>

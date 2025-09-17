@@ -5,7 +5,7 @@
 @endsection
 @section('content')
 
-<link rel="stylesheet" href="{{asset('public/assets/frontend/')}}/dist/css/tailwind.css">
+<link rel="stylesheet" href="{{asset('assets/frontend/')}}/dist/css/tailwind.css">
 
 
 <!-- Content Wrapper. Contains page content -->

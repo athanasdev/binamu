@@ -93,7 +93,7 @@
   </section>
 
 
-  <script src="{{asset('public/assets/frontend/')}}/js/jquery-3.7.0.min.js"></script>
+  <script src="{{asset('assets/frontend/')}}/js/jquery-3.7.0.min.js"></script>
   <script>
 
     $( document ).ready(function() {

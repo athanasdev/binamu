@@ -48,24 +48,24 @@
                 </div>
                 <div class="d-flex justify-content-between top-up-user-name-right">
                     <div class="top-up-item top-up-item-right">
-                        <img src="{{asset('public/assets/frontend/')}}/images/recharge.png" alt="">
+                        <img src="{{asset('assets/frontend/')}}/images/recharge.png" alt="">
                         <p>রিচার্জ</p>
                     </div>
 
                     <div class="top-up-item top-up-item-right">
-                        <img src="{{asset('public/assets/frontend/')}}/images/taka.png" alt="">
+                        <img src="{{asset('assets/frontend/')}}/images/taka.png" alt="">
                         <p>টাকা</p>
                     </div>
 
 
                     <div class="top-up-item top-up-item-right">
-                        <img src="{{asset('public/assets/frontend/')}}/images/vip.png" alt="">
+                        <img src="{{asset('assets/frontend/')}}/images/vip.png" alt="">
                         <p>VIP</p>
                     </div>
 
     
                     <div class="top-up-item top-up-item-right">
-                        <img src="{{asset('public/assets/frontend/')}}/images/grahok.png" alt="">
+                        <img src="{{asset('assets/frontend/')}}/images/grahok.png" alt="">
                         <p>গ্রাহক</p>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                                                                 <div class="col-12">
                                                                     <div class="d-flex justify-content-between align-items-center cart-midle-line">
                                                                         <div class="text-start play-type one">
-                                                                            <img src="{{asset('public/assets/frontend/')}}/images/footballt_1.png" alt="">
+                                                                            <img src="{{asset('assets/frontend/')}}/images/footballt_1.png" alt="">
                                                                         </div>
                                                                         <div class="player-country-name two">
                                                                             <h4> {{ $item->team_one ?? '' }} </h4>
@@ -182,7 +182,7 @@
                                                                             <h4> {{ $item->team_two ?? '' }}</h4>
                                                                         </div>
                                                                         <div class="text-end play-type five">
-                                                                            <img src="{{asset('public/assets/frontend/')}}/images/footballt_1.png" alt="">
+                                                                            <img src="{{asset('assets/frontend/')}}/images/footballt_1.png" alt="">
                                                                         </div>
 
                                                                     </div>

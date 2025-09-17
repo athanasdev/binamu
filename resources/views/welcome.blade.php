@@ -27,7 +27,7 @@
  <!-- start:: marque  -->
  <div class="container">
     <div class="marquee-area">
-        <span><img src="{{asset('public/assets/frontend/')}}/images/medium-volume.png" alt=""></span>
+        <span><img src="{{asset('assets/frontend/')}}/images/medium-volume.png" alt=""></span>
         <marquee behavior="" direction="">{{ $site_info->marquee ?? '' }}</marquee>
     </div>
  </div>
@@ -42,7 +42,7 @@
                 <div class="icon-item">
                     <a href="{{ route('recharge') }}">
                     <div class="icon">
-                        <img src="{{asset('public/assets/frontend/')}}/images/rechargeable.png" alt="">
+                        <img src="{{asset('assets/frontend/')}}/images/rechargeable.png" alt="">
                     </div>
                     <p>Recharge</p>
                     </a>
@@ -52,7 +52,7 @@
                 <div class="icon-item">
                     <a href="{{ route('withdraw') }}">
                     <div class="icon">
-                        <img src="{{asset('public/assets/frontend/')}}/images/cash-withdrawal.png" alt="">
+                        <img src="{{asset('assets/frontend/')}}/images/cash-withdrawal.png" alt="">
                     </div>
                     <p>Withdraw</p>
                 </a>
@@ -62,7 +62,7 @@
                 <div class="icon-item">
                     <a href="{{ $site_info->one_line_service_link ?? '#' }}">
                     <div class="icon">
-                        <img src="{{asset('public/assets/frontend/')}}/images/24-hours.png" alt="">
+                        <img src="{{asset('assets/frontend/')}}/images/24-hours.png" alt="">
                     </div>
                     <p>Service</p>
                 </a>
@@ -72,7 +72,7 @@
                 <div class="icon-item">
                     <a href="/Youbo2024.apk">
                     <div class="icon">
-                        <img src="{{asset('public/assets/frontend/')}}/images/download.png" alt="/Youbo2024.apk">
+                        <img src="{{asset('assets/frontend/')}}/images/download.png" alt="/Youbo2024.apk">
                     </div>
                     <p>Download</p>
                 </a>
@@ -91,7 +91,7 @@
             <div class="col-6">
                 <a href="{{ route('all-matchs') }}" style=" width: 100%;">
 
-                    <div class="score-item" style="background-image: url('{{asset('public/assets/frontend/')}}/images/counter-bg.png');">
+                    <div class="score-item" style="background-image: url('{{asset('assets/frontend/')}}/images/counter-bg.png');">
                         <div class="score-img">
                             <img src="/mesi0912.jpg" alt="">
                         </div>
@@ -105,7 +105,7 @@
             </div>
             <div class="col-6">
                 <a href="{{ route('tomorrow-matchs') }}" style=" width: 100%;">
-                    <div class="score-item" style="background-image: url('{{asset('public/assets/frontend/')}}/images/counter-bg.png');">
+                    <div class="score-item" style="background-image: url('{{asset('assets/frontend/')}}/images/counter-bg.png');">
                         <div class="score-img">
                             <img src="/photo1706871883.jpeg" alt="">
                         </div>
@@ -130,7 +130,7 @@
     <section class="sport-area">
         <div class="container">
         <a href="{{ route('details', $item->id) }}" class="w-100">
-            <div class="sport-wrapper" style="background-image: url('{{asset('public/assets/frontend/')}}/images/counter-bg.png');">
+            <div class="sport-wrapper" style="background-image: url('{{asset('assets/frontend/')}}/images/counter-bg.png');">
                 <div class="sport-left text-start">
                     <div class="image">
                         <img src="{{asset($item->team_one_logo)}}" alt="">

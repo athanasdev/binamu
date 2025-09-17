@@ -14,7 +14,7 @@
             <div class="col-md-6">
                 <div class="payment-submit-wrapper">
                     <div class="image text-center">
-                        <img src="{{asset('public/assets/frontend/')}}/images/online-payment.png" alt="">
+                        <img src="{{asset('assets/frontend/')}}/images/online-payment.png" alt="">
                     </div>
                     <h6>অর্ডার পর্যালোচনা করা হচ্ছে, পর্যালোচনা এর ৩০ মিনিটের মধ্যে সম্পন্ন হবে বলে আশা করা যাচ্ছে</h6>
                     <div class="py-4 text-center">
