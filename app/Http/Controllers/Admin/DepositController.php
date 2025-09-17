@@ -108,23 +108,42 @@ class DepositController extends Controller
     }
 
     public function approve(Request $request, $id){
-  
+
         $data = Deposit::find($id);
+        if(!$data){
+            $notification=array(
+                'message' => 'Deposit not found',
+                'alert-type' => 'error'
+            );
+            return redirect()->back()->with($notification);
+        }
         $data->status = 1;
         $data->save();
 
-        $user = User::where('id', $data->user_id)->first();
+        $user = User::find($data->user_id);
+        if(!$user){
+            $notification=array(
+                'message' => 'User not found',
+                'alert-type' => 'error'
+            );
+            return redirect()->back()->with($notification);
+        }
+        $old_user_balance = $user->balance;
 
         User::where('id', $data->user_id)->update([
             'balance' => $user->balance + $data->amount_coin,
         ]);
 
         $site_info = SiteInfo::first();
+        if(!$site_info){
+            $site_info = (object) ['first_level_commission' => 0, 'second_level_commission' => 0, 'third_level_commission' => 0];
+        }
 
         $first_level = User::where('own_refer_code', $user->refer_by)->first();
 
         if($first_level){
 
+            $old_balance = $first_level->balance;
             $commisson = ($data->amount_coin * $site_info->first_level_commission) / 100;
 
             User::where('id', $first_level->id)->update([
@@ -135,10 +154,10 @@ class DepositController extends Controller
                 $trx = new Transaction();
                 $trx->user_id = $first_level->id;
                 $trx->type = 'Deposit Commision';
-                $trx->old_balance = $first_level->balance;
+                $trx->old_balance = $old_balance;
                 $trx->debit = 0;
                 $trx->credit = $commisson;
-                $trx->new_balance = $first_level->balance + $commisson;
+                $trx->new_balance = $old_balance + $commisson;
                 $trx->decription = '1st Level Commision '.$commisson.' Coins';
                 $trx->save();
             }
@@ -154,21 +173,22 @@ class DepositController extends Controller
 
             if($second_level){
 
+                $old_balance = $second_level->balance;
                 $commisson = ($data->amount_coin * $site_info->second_level_commission) / 100;
-    
+
                 User::where('id', $second_level->id)->update([
                     'balance' => $second_level->balance + $commisson,
                 ]);
-                
+
 
                 if($commisson > 0){
                     $trx = new Transaction();
                     $trx->user_id = $second_level->id;
                     $trx->type = 'Deposit Commision';
-                    $trx->old_balance = $second_level->balance;
+                    $trx->old_balance = $old_balance;
                     $trx->debit = 0;
                     $trx->credit = $commisson;
-                    $trx->new_balance = $second_level->balance + $commisson;
+                    $trx->new_balance = $old_balance + $commisson;
                     $trx->decription = '2nd Level  Commision '.$commisson.' Coins';
                     $trx->save();
                 }
@@ -184,21 +204,22 @@ class DepositController extends Controller
 
             if($third_level){
 
+                $old_balance = $third_level->balance;
                 $commisson = ($data->amount_coin * $site_info->third_level_commission) / 100;
-    
+
                 User::where('id', $third_level->id)->update([
                     'balance' => $third_level->balance + $commisson,
                 ]);
-                
+
 
                 if($commisson > 0){
                     $trx = new Transaction();
                     $trx->user_id = $third_level->id;
                     $trx->type = 'Deposit Commision';
-                    $trx->old_balance = $third_level->balance;
+                    $trx->old_balance = $old_balance;
                     $trx->debit = 0;
                     $trx->credit = $commisson;
-                    $trx->new_balance = $third_level->balance + $commisson;
+                    $trx->new_balance = $old_balance + $commisson;
                     $trx->decription = '3rd Level Commision '.$commisson.' Coins';
                     $trx->save();
                 }
@@ -211,10 +232,10 @@ class DepositController extends Controller
         $trx = new Transaction();
         $trx->user_id = $user->id;
         $trx->type = 'Deposit';
-        $trx->old_balance = $user->balance;
+        $trx->old_balance = $old_user_balance;
         $trx->debit = 0;
         $trx->credit = $data->amount_coin;
-        $trx->new_balance = $user->balance + $data->amount_coin;
+        $trx->new_balance = $old_user_balance + $data->amount_coin;
         $trx->decription = 'Deposit '.$data->amount_coin.' Coins';
         $trx->save();
 
