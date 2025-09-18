@@ -36,7 +36,7 @@ class AuthenticationController extends Controller
 
         $this->validate($request,[
             'name' => 'required',
-            'phone' => 'required|unique:users',
+            'email' => 'required|unique:users',
             'password' => 'required|confirmed|min:6',
             'trade_password' => 'min:6|required_with:trade_password_confirmation|same:trade_password_confirmation',
 
@@ -49,12 +49,12 @@ class AuthenticationController extends Controller
 
         $refer_bonus = 0;
 
-        // dd($request->phone);
+        // dd($request->email);
 
         $user = new User();
         $user->unique_id = 0;
         $user->name = $request->name;
-        $user->phone = $request->phone;
+        $user->email = $request->email;
         $user->balance = 0;
         $user->transaction_balance = 0;
         $user->refer_by = $request->refer_by;
@@ -91,7 +91,7 @@ class AuthenticationController extends Controller
     public function submit_login(Request $request)
     {
         $userdata = array(
-          'phone' => $request->phone,
+          'email' => $request->email,
           'password' => $request->password
         );
 

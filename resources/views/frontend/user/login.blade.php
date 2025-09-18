@@ -23,14 +23,12 @@
 
                             @include('frontend.layouts.flash-message')
 
-
-
                             <form action="{{ route('submit_login') }}" method="post">
 
                                 @csrf
 
                                 <div class="form-group mb-2">
-                                    <input type="number" name="phone"  class="form-control" placeholder="Phone Number" required>
+                                    <input type="text" name="email"  class="form-control" placeholder="Email" required>
                                 </div>
                                 <div class="form-group mb-2">
                                     <input type="password" name="password" class="form-control" placeholder="Password" required>
@@ -41,9 +39,9 @@
                                 </div>
                             </form>
                             <div class="footer">
-                                <a href="#">Contact Service</a>
+                                {{-- <a href="#">Contact Service</a> --}}
                                 
-                                <span style="color: white">Are you new here ? <a href="{{ route('registration') }}">Register</a> </span>
+                                <span style="color: white">Are you new here ? <a href="{{ route('registration') }}">signup</a> </span>
 
                             </div>
                         </div>

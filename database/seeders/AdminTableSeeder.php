@@ -17,10 +17,10 @@ class AdminTableSeeder extends Seeder
         Admin::create([
             'name'=>"Admin",
             'email'=>'admin@gmail.com',
-            'phone'=>'01916962118',
-            'password' => bcrypt('123123123'),
+            'email'=>'admin@trade.com',
+            'password' => bcrypt('Trade@2025'),
             'role_id'=>1,
-            'image'=>'http://via.placeholder.com/37x37?text=Admin Image-37x37',
+            'image'=>'null',
             'status'=>1
         ]);
     }

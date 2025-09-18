@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->string('phone')->nullable();
+            $table->string('email')->unique();
             $table->string('refer_by')->nullable();
             $table->string('own_refer_code')->nullable();
             $table->float('balance', 10,2)->default(0.00);
