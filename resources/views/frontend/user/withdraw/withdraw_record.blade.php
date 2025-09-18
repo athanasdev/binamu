@@ -13,7 +13,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="money-log-table-wrapper">
-                  <div class="table-body-wrapper">
+                  <div class="table-body-wrapper table-responsive">
                     <table class="table">
                         <thead>
                           <tr>

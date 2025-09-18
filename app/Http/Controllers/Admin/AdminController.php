@@ -61,7 +61,7 @@ class AdminController extends Controller
             $data = Admin::where('id',$id)->first();
             $data->name=$request->name;
             $data->user_name=$request->username;
-            $data->phone=$request->phone;
+            $data->email=$request->email;
             $data->email=$request->email;
             $data->address=$request->address;
         if($request->hasFile('image')) {

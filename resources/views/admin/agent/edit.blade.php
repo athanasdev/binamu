@@ -77,8 +77,8 @@
                                             
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail1">Phone</label>
-                                                    <input type="text" name="phone" class="form-control" id="exampleInputEmail1" placeholder="Phone" value="{{ $data->phone }}">
+                                                    <label for="exampleInputEmail1">email</label>
+                                                    <input type="text" name="email" class="form-control" id="exampleInputEmail1" placeholder="email" value="{{ $data->email }}">
 
                                                 </div>
                                             </div>
@@ -97,7 +97,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Password</label>
-                                                    <input type="text" name="password" class="form-control" id="exampleInputEmail1" placeholder="Phone" value="{{ $data->password_str }}">
+                                                    <input type="text" name="password" class="form-control" id="exampleInputEmail1" placeholder="email" value="{{ $data->password_str }}">
 
                                                 </div>
                                             </div>

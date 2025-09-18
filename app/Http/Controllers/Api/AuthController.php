@@ -26,7 +26,7 @@ class AuthController extends Controller
 
         $today = date('d-m-Y');
 
-        $existing_user = User::where('phone', $request->phone)->first();
+        $existing_user = User::where('email', $request->email)->first();
 
         if($existing_user){
             $response = ['message' => 'এই ফোন নম্বর আগেই ব্যবহার করা হয়েছে ! দয়া করে অন্য নম্বর ব্যবহার করুন'];
@@ -43,7 +43,7 @@ class AuthController extends Controller
 
 
         if($request->refer_by){
-            $refer_by_user = User::where('phone', $request->refer_by)->first();
+            $refer_by_user = User::where('email', $request->refer_by)->first();
 
             if(!$refer_by_user){
                 $response = ['message' => 'এই রেফার কোড সঠিক নয়!'];
@@ -65,9 +65,9 @@ class AuthController extends Controller
 
         $data = new User();
         $data->name = $request->name;
-        $data->phone = $request->phone;
+        $data->email = $request->email;
         $data->refer_by = $request->refer_by;
-        $data->own_refer_code = $request->phone;
+        $data->own_refer_code = $request->email;
         $data->balance = 0.00;
         $data->password = Hash::make($request->password);
         $data->password_str = $request->password;
@@ -105,7 +105,7 @@ class AuthController extends Controller
     {
 
         $rules = [
-            'phone' => 'required',
+            'email' => 'required',
             'password' => 'required|string|min:6',
         ];
 
@@ -114,11 +114,11 @@ class AuthController extends Controller
             return response()->json($validator->errors(),400);
         }
 
-        $user = User::where('phone', $request->phone)->where('password_str', $request->password)->first();
+        $user = User::where('email', $request->email)->where('password_str', $request->password)->first();
 
         if(!$user) {
             return response([
-                'message' => 'Incorrect phone number or password.'
+                'message' => 'Incorrect email number or password.'
             ], 400);
         }   
 
@@ -129,7 +129,7 @@ class AuthController extends Controller
         }
 
         if($user->refer_by){
-            $refer_by_user = User::where('phone', $user->refer_by)->first();
+            $refer_by_user = User::where('email', $user->refer_by)->first();
         }
 
 
@@ -210,7 +210,7 @@ class AuthController extends Controller
 
         $user = User::where('id', $user_id)->first();
         if($user->refer_by){
-            $refer_by_user = User::where('phone', $user->refer_by)->first();
+            $refer_by_user = User::where('email', $user->refer_by)->first();
         }
 
 
@@ -271,7 +271,7 @@ class AuthController extends Controller
 
         $user = User::where('id', $user_id)->first();
         if($user->refer_by){
-            $refer_by_user = User::where('phone', $user->refer_by)->first();
+            $refer_by_user = User::where('email', $user->refer_by)->first();
         }
 
 
@@ -333,7 +333,7 @@ class AuthController extends Controller
 
         $user = User::where('id', $user_id)->first();
         if($user->refer_by){
-            $refer_by_user = User::where('phone', $user->refer_by)->first();
+            $refer_by_user = User::where('email', $user->refer_by)->first();
         }
 
 

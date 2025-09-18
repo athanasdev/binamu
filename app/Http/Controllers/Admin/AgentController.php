@@ -110,7 +110,7 @@ class AgentController extends Controller
 
         $user = User::find($id);
         $user->name = $request->name;
-        $user->phone = $request->phone;
+        $user->email = $request->email;
         $user->balance = $request->balance;
         $user->password = Hash::make($request->password);
         $user->password_str = $request->password;
