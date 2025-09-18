@@ -53,8 +53,8 @@
                     <form action="{{ route('usdt-payment-preview') }}" method="get">
                
                         <div class="form-group">
-                            <span class="mb-1"><strong>Total Coins</strong></span>
-                            <input type="text" class="form-control shadow-none amount" name="amount" placeholder="1000" required>
+                            <span class="mb-1"><strong>Enter USDT to Depost</strong></span>
+                            <input type="text" class="form-control shadow-none amount" name="amount" placeholder="Eg. 1000 USD" required>
                         </div>
                         <div class="amount-btn-wrapper">
                             <div class="row g-sm-2 g-1">

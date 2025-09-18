@@ -19,16 +19,16 @@
                                 <span><img src="{{asset('assets/frontend/')}}/images/usdt.png" alt="usdt"></span>
                                 <a href="{{ route('usdt-payment') }}">
                                     <h4>USDT</h4>
-                                    <p>A Single transation minimum of {{$site_info->min_deposit_usdt ?? 0}} Coins</p>
+                                    <p>A Minimum of {{$site_info->min_deposit_usdt ?? 0}} USDT</p>
                                 </a>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <span><img src="{{asset('assets/frontend/')}}/images/online-payment.png" alt="online payment"></span>
                                 <a href="{{ route('online-payment') }}">
                                     <h4>Online payment</h4>
                                     <p>A minimum of {{$site_info->min_deposit_online ?? 0}} Coins and a maximum of {{$site_info->max_deposit_online ?? 0}} Coins</p>
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                     <div class="reacharge-note">
